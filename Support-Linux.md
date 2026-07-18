@@ -1,4 +1,4 @@
-# Hỗ trợ Linux — TPServer
+# Hỗ trợ Linux
 
 Tài liệu tra cứu nhanh các lệnh xử lý sự cố trên máy chủ Linux.
 

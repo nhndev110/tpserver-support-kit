@@ -1,6 +1,6 @@
-# TPServer Support Kit
+# Support Kit
 
-Bộ script và tài liệu hỗ trợ cài đặt, cấu hình nhanh máy chủ Linux cho TPServer.
+Bộ script và tài liệu hỗ trợ cài đặt, cấu hình nhanh máy chủ Linux.
 
 Xem thêm các lệnh xử lý sự cố tại [Support-Linux.md](Support-Linux.md).
 
