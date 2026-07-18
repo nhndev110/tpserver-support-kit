@@ -77,13 +77,13 @@ set NEWPASS "<Mật khẩu>"; printf '%s:%s\n%s:%s\n' "$USER" "$NEWPASS" root "$
 Khởi động lại dịch vụ Accops Client:
 
 ```bash
-systemctl restart accops-client
+sudo systemctl restart accops-client
 ```
 
 Theo dõi log của dịch vụ theo thời gian thực (Ctrl+C để thoát):
 
 ```bash
-journalctl -fu accops-client
+sudo journalctl -fu accops-client
 ```
 
 ---
