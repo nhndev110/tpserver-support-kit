@@ -84,7 +84,7 @@ sudo reboot now
 
 ---
 
-## Script Setup Nhanh OS — Script làm những gì?
+## Script Setup Nhanh Linux — Script làm những gì?
 
 > 💡 Lệnh tải & chạy script (CachyOS / Debian) xem tại [README.md](README.md).
 

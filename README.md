@@ -16,17 +16,9 @@ curl -fsSL https://raw.githubusercontent.com/nhndev110/linux-support-kit/refs/he
 
 ### Debian
 
-Đặt mật khẩu cho `root` rồi chuyển sang phiên `root`:
+> ⚠️ Chạy bằng `root`: đặt mật khẩu root (`sudo passwd root`) rồi vào phiên root (`su -`) trước khi chạy script.
 
-```bash
-sudo passwd root
-```
-
-```bash
-su -
-```
-
-Tải và chạy script cài đặt (dùng `curl` hoặc `wget`):
+Tải và chạy script cài đặt (dùng `curl` **hoặc** `wget`):
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/nhndev110/linux-support-kit/refs/heads/main/setup-debian13.sh -o setup-debian13.sh && chmod +x setup-debian13.sh && ./setup-debian13.sh
@@ -36,7 +28,7 @@ curl -fsSL https://raw.githubusercontent.com/nhndev110/linux-support-kit/refs/he
 wget -qO setup-debian13.sh https://raw.githubusercontent.com/nhndev110/linux-support-kit/refs/heads/main/setup-debian13.sh && chmod +x setup-debian13.sh && ./setup-debian13.sh
 ```
 
-> 💡 Xem chi tiết **script làm những gì** tại [Support-Linux.md](Support-Linux.md#script-setup-nhanh-os--script-làm-những-gì).
+> 💡 Xem chi tiết **script làm những gì** tại [Support-Linux.md](Support-Linux.md#script-setup-nhanh-linux--script-làm-những-gì).
 
 ---
 
@@ -48,3 +40,5 @@ Tải và chạy script menu (gồm cấu hình DNS và các chức năng bổ s
 curl -fsSL -o /tmp/support-kit.sh https://raw.githubusercontent.com/nhndev110/linux-support-kit/refs/heads/main/scripts-support-kit.sh
 bash /tmp/support-kit.sh
 ```
+
+> 💡 Xem danh sách **các chức năng** của menu tại [Support-Linux.md](Support-Linux.md#support-kit--menu-xử-lý-sự-cố).
