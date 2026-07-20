@@ -14,9 +14,23 @@ pause() {
 # 1) Cấu hình DNS qua NetworkManager
 # ---------------------------------------------------------------------------
 configure_dns_nm() {
-    local DNS DEV CON
+    local DNS DEV CON PICK
 
-    read -rp "Nhập DNS (VD 8.8.8.8,1.1.1.1): " DNS
+    echo "Chọn nhóm DNS:"
+    echo "  1) Google      (8.8.8.8,8.8.4.4)"
+    echo "  2) Cloudflare  (1.1.1.1,1.0.0.1)"
+    echo "  3) Viettel     (203.113.131.1,203.113.131.2)"
+    echo "  4) VNPT        (203.162.4.191,203.162.4.190)"
+    echo "  5) Tự nhập"
+    read -rp "Lựa chọn [1]: " PICK
+    case "${PICK:-1}" in
+        1) DNS="8.8.8.8,8.8.4.4" ;;
+        2) DNS="1.1.1.1,1.0.0.1" ;;
+        3) DNS="203.113.131.1,203.113.131.2" ;;
+        4) DNS="203.162.4.191,203.162.4.190" ;;
+        5) read -rp "Nhập DNS (VD 8.8.8.8,1.1.1.1): " DNS ;;
+        *) echo "Lựa chọn không hợp lệ"; return 1 ;;
+    esac
     [ -z "$DNS" ] && { echo "Bạn chưa nhập DNS"; return 1; }
 
     DEV=$(ip -4 route show default | awk '{print $5; exit}')
